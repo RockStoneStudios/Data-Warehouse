@@ -1,0 +1,83 @@
+<%- include('partials/header'); %>
+
+ <div class="datatable-container mt-3">
+     <div class="header">
+        <div class="header-buscar">
+            <div class="buscar">
+             <input type="text" class="buscar-input" placeholder="Buscar Contacto">
+            </div>
+            <div class="logobuscar">
+            <i class="fa fa-search"></i>
+            </div>
+         </div>
+          <div class="funcionalidades">
+              <div class="botones btn">
+                  <a href="">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <i class="fa fa-upload fa-lg"></i>
+                  </a>
+              </div>
+              <div class="botones btn btn-block">
+                <a href="">
+                <span></span>  
+                <span></span>
+                <span></span>
+                <span></span>  
+                Exportar Contactos<i class="fa fa-arrow-down fa-lg"></i>
+                </a>
+              </div>
+              <div class="botones btn">
+                 <a href="/agregarContacto">
+                 <span></span>     
+                 <span></span>
+                 <span></span>
+                 <span></span>
+                 Agregar Contactos
+                </a>
+              </div>
+          </div>
+     </div>
+    <table class="datatable">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Contacto</th>
+                <th>Pais/Region</th>
+                <th>Compañia</th>
+                <th>Cargo</th>
+                <th>CanalPreferido</th>
+                <th>Interes</th>
+                <th>Acciones</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox"></td>
+               
+                <td>Jeff Bezos</td>
+                <td>Austin Texas</td>
+                <td>SpaceX</td>
+                <td>CEO</td>
+                <td>Twitter</td>
+                <td>Espacio</td>
+                <td>51</td>
+            </tr>
+            <tr>
+                <td class="table-checkbox"><input type="checkbox"></td>
+               
+                <td>Elon Musk</td>
+                <td>Austin Texas</td>
+                <td>SpaceX</td>
+                <td>CEO</td>
+                <td>Twitter</td>
+                <td>Espacio</td>
+                <td>51</td>
+            </tr>
+            
+        </tbody>
+    </table>
+ </div>

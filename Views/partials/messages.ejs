@@ -1,0 +1,20 @@
+
+<pre>(success)</pre>
+<% if (success) { %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <%= success %>
+      <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+     <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<% } %>
+<pre>(error)</pre>
+<% if (error) { %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <%= error %>
+      <button class="close" type="button" data-dismiss="alert" aria-label="Close">
+     <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<% } %>
+
