@@ -7,6 +7,7 @@ const session = require('express-session');
 const cookies = require('cookie-parser');
 const RouterUsuario = require('./Routers/usuario.router');
 const routerPrincipal = require('./Routers/index.router');
+const RouterRegion = require('./Routers/region');
 const DB  = require('./Models/conexion');
 
 //Setting
@@ -15,8 +16,9 @@ app.set('view engine','ejs');
 app.set('Views',path.join(__dirname,'Views'));
 
 //Middlewares
-app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
 app.use(cookies());
 app.use(express.static(path.join(__dirname,'/Public')));
 app.use(session({
@@ -31,12 +33,13 @@ app.use((req,res,next)=>{
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
     next();
-})
+});
 
 
 //Routers
 app.use(routerPrincipal);
 app.use(RouterUsuario);
+app.use(RouterRegion);
 
 app.listen(config.PORT,()=>{
     console.log('Starting Port');

@@ -102,6 +102,7 @@ CtrlUsuario.login = async(req,res)=>{
      if(verificarPassword){
         const token = jwt.sign(usuarioAutenticado,config.TOKEN_SECRET);
          res.cookie('jwt',token,{httpOnly : true});
+         //pasar objeto para desactivar usuario en la vista
         res.redirect('/principal');
      }
      else{
