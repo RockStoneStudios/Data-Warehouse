@@ -1,13 +1,17 @@
 const {Schema,model} = require('mongoose');
+const Ciudad = require('./Ciudad');
 
 
 const SchemaCompañia = new Schema({
      nombre : String,
-     pais : {
+     direccion : String,
+     email : String,
+     telefono : String,
+     ciudad : {
           type : Schema.Types.ObjectId,
-          ref : 'Pais'
-     },
-      direccion : String
+          ref : 'Ciudad'
+     }
+
 });
 
 module.exports = model('Compañia',SchemaCompañia);
